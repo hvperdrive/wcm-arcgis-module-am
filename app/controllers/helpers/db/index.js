@@ -4,8 +4,8 @@ var findDeletedItems = require("./findDeletedItems");
 var removeDeletedItems = require("./removeDeletedItems");
 
 module.exports = {
-	findExistingItems: findExistingItems,
-	updateExistingItems: updateExistingItems,
-	findDeletedItems: findDeletedItems,
-	removeDeletedItems: removeDeletedItems,
+    findExistingItems: findExistingItems,
+    updateExistingItems: updateExistingItems,
+    findDeletedItems: findDeletedItems,
+    removeDeletedItems: removeDeletedItems
 };
