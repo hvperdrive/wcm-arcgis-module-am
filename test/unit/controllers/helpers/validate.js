@@ -9,7 +9,7 @@ describe("Validate helper", function() {
             meta: {
                 contentType: {
                     meta: {
-                        safeLabel: "projects"
+                        safeLabel: "projecten"
                     }
                 }
             }
