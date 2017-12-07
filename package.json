@@ -1,6 +1,6 @@
 {
     "name": "@wcm/arcgis-module-am",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "ArcGIS module",
     "main": "app",
     "scripts": {
@@ -42,7 +42,7 @@
     "author": "Thomas Bormans",
     "license": "ISC",
     "dependencies": {
-        "@wcm/module-helper": "git+git@github.com:hvperdrive/wcm-module-helper.git",
+        "@wcm/module-helper": "1.0.0",
         "lodash": "~4.17.4",
         "node-uuid": "~1.4.7",
         "q": "~1.4.1",
