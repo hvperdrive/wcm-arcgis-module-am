@@ -1,7 +1,7 @@
 "use strict";
 
 angular
-	.module("arcgis-am_1.0.1")
+	.module("arcgis-am_1.1.0")
 	.config([
 		"$stateProvider",
 		"arcgisAMConfigProvider",

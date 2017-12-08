@@ -51,12 +51,12 @@ var bumpVersion = function bumpVersion(level) {
 };
 
 var bumpAngularModuleVersion = function bumpAngularModuleVersion(version) {
-	var reg = new RegExp("'" + name + "_[0-9]{1,}\\.[0-9]{1,}\\.[0-9]{1,}", "g");
-	var reg2 = new RegExp("version: '[0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}',", "g");
+	var reg = new RegExp("\"" + name + "_[0-9]{1,}\\.[0-9]{1,}\\.[0-9]{1,}", "g");
+	var reg2 = new RegExp("version: \"[0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}\",", "g");
 
 	return gulp.src(["./public/app/**/*.js"])
-		.pipe(replace(reg, "'" + name + "_" + version))
-		.pipe(replace(reg2, "version: '" + version + "',"))
+		.pipe(replace(reg, "\"" + name + "_" + version))
+		.pipe(replace(reg2, "version: \"" + version + "\","))
 		.pipe(gulp.dest("./public/app"));
 
 };

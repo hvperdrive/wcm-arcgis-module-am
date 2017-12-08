@@ -1,7 +1,7 @@
 "use strict";
 
 angular
-	.module("arcgis-am_1.0.1.controllers")
+	.module("arcgis-am_1.1.0.controllers")
 	.controller("arcgisAMOverviewController", [
 		"$scope",
 		"$timeout",
