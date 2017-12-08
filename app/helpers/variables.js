@@ -35,9 +35,16 @@ var checkVariables = function(response) {
 
 	return prom.promise;
 };
+var set = function set(info) {
+	packageInfo = info;
+};
 
-module.exports = function() {
+module.exports = function(info) {
 	var prom = Q.defer();
+
+	if (info) {
+		set(info);
+	}
 
 	// Get variables from cms
 	VariableHelper
@@ -55,10 +62,8 @@ module.exports = function() {
 	return prom.promise;
 };
 
-module.exports.set = function set(info) {
-	packageInfo = info;
-};
-
+module.exports.set = set;
 module.exports.get = function get() {
 	return packageInfo;
 };
+

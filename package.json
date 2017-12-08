@@ -1,74 +1,89 @@
 {
-    "name": "@wcm/arcgis-module-am",
-    "version": "1.0.1",
-    "description": "ArcGIS module",
-    "main": "app",
-    "scripts": {
-        "test": "NODE_ENV=test ./node_modules/.bin/istanbul cover --dir ./coverage ./node_modules/.bin/_mocha -- -R spec -t 15000 --recursive --slow 2"
+  "name": "@wcm/arcgis-module-am",
+  "version": "1.0.1",
+  "description": "ArcGIS module",
+  "main": "app",
+  "scripts": {
+    "test": "NODE_ENV=test ./node_modules/.bin/istanbul cover --dir ./coverage ./node_modules/.bin/_mocha -- -R spec -t 15000 --recursive --slow 2"
+  },
+  "keywords": [
+    "arcgis",
+    "Pelorus",
+    "WCM"
+  ],
+  "wcmModule": {
+    "angularDirPath": "public/app/",
+    "moduleConfig": {
+      "angularModule": "arcgis-am",
+      "translationKey": "Arcgis",
+      "operationType": "arcgis-am",
+      "icon": "map",
+      "type": "system",
+      "navigationItem": true,
+      "authentication": {
+        "requiresLogin": true
+      }
     },
-    "keywords": [
-        "arcgis",
-        "Pelorus",
-        "WCM"
-    ],
-    "wcmModule": {
+    "variables": [
+      {
+        "group": "Features",
+        "key": "features",
+        "enabled": true,
+        "accordion": true,
         "variables": [
-            {
-                "group": "Features",
-                "key": "features",
-                "enabled": true,
-                "accordion": true,
-                "variables": [
-                    {
-                        "label": "Polygon url",
-                        "description": "Polygon feature layer url.",
-                        "key": "polygonUrl",
-                        "value": "",
-                        "type": "text",
-                        "required": true
-                    },
-                    {
-                        "label": "Point url",
-                        "description": "Point feature layer url.",
-                        "key": "pointUrl",
-                        "value": "",
-                        "type": "text",
-                        "required": true
-                    }
-                ]
-            }
+          {
+            "label": "Polygon url",
+            "description": "Polygon feature layer url.",
+            "key": "polygonUrl",
+            "value": "",
+            "type": "text",
+            "required": true
+          },
+          {
+            "label": "Point url",
+            "description": "Point feature layer url.",
+            "key": "pointUrl",
+            "value": "",
+            "type": "text",
+            "required": true
+          }
         ]
-    },
-    "author": "Thomas Bormans",
-    "license": "ISC",
-    "dependencies": {
-        "@wcm/module-helper": "1.0.0",
-        "lodash": "~4.17.4",
-        "node-uuid": "~1.4.7",
-        "q": "~1.4.1",
-        "request": "~2.79.0",
-        "rootpath": "~0.1.2"
-    },
-    "devDependencies": {
-        "@district01/eslint-config": "~1.0.0",
-        "apidoc-swagger": "git+https://github.com/JvJefke/apidoc-swagger.git",
-        "chai": "~3.5.0",
-        "eslint": "~3.19.0",
-        "gulp": "~3.9.1",
-        "gulp-angular-templatecache": "~2.0.0",
-        "gulp-apidoc": "~0.2.0",
-        "gulp-apidoc-swagger": "~0.2.2",
-        "gulp-clean": "~0.3.2",
-        "gulp-replace": "~0.5.4",
-        "gulp-zip": "~3.2.0",
-        "install": "~0.8.4",
-        "istanbul": "~0.4.5",
-        "jshint": "~2.9.4",
-        "mocha": "~3.4.1",
-        "mockery": "~2.0.0",
-        "mongoose": "~4.9.9",
-        "nock": "~9.0.13",
-        "rewire": "~2.5.2",
-        "run-sequence": "~1.2.2"
-    }
+      }
+    ]
+  },
+  "author": "Thomas Bormans",
+  "license": "ISC",
+  "dependencies": {
+    "@wcm/module-helper": "1.0.0",
+    "lodash": "~4.17.4",
+    "node-uuid": "~1.4.7",
+    "q": "~1.4.1",
+    "ramda": "^0.25.0",
+    "request": "~2.79.0",
+    "rootpath": "~0.1.2"
+  },
+  "devDependencies": {
+    "@district01/eslint-config": "~1.0.0",
+    "apidoc-swagger": "git+https://github.com/JvJefke/apidoc-swagger.git",
+    "chai": "~3.5.0",
+    "eslint": "~3.19.0",
+    "gulp": "~3.9.1",
+    "gulp-angular-templatecache": "~2.0.0",
+    "gulp-apidoc": "~0.2.0",
+    "gulp-apidoc-swagger": "~0.2.2",
+    "gulp-clean": "~0.3.2",
+    "gulp-replace": "~0.5.4",
+    "gulp-zip": "~3.2.0",
+    "install": "~0.8.4",
+    "istanbul": "~0.4.5",
+    "jshint": "~2.9.4",
+    "mocha": "~3.4.1",
+    "mockery": "~2.0.0",
+    "mongoose": "~4.9.9",
+    "nock": "~9.0.13",
+    "proxyquire": "^1.8.0",
+    "rewire": "~2.5.2",
+    "run-sequence": "~1.2.2",
+    "sinon": "^4.1.3"
+  }
 }
