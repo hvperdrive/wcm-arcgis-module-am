@@ -4,7 +4,7 @@ angular
 	.module("arcgis-am_1.0.1")
 	.config([
 		"$stateProvider",
-		"aarcgisAMConfigProvider",
+		"arcgisAMConfigProvider",
 
 		function(
 			$stateProvider,
