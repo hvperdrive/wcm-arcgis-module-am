@@ -15,13 +15,15 @@ var handleUpsertResponse = function handleUpsertResponse(body) {
 			});
 		}
 		return Q.reject("ObjectId not received from ArcGIS");
+	} else if (_.get(body, "success", false)) {
+		return Q.when();
 	}
 
 	return Q.reject("Unknown ArcGIS error");
 };
 
 var handleGetResponse = function handleGetResponse(body) {
-	return _.get(body, "objectIds", false) ? Q.when(body) : Q.reject("Invalid result from Arcgis");
+	return _.get(body, "objectIds", false) !== false ? Q.when(body) : Q.reject("Invalid result from Arcgis");
 };
 
 module.exports = function(options) {

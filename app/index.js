@@ -7,4 +7,5 @@ module.exports = function(app, hooks, info) {
 	require("./controllers/create");
 	require("./controllers/update");
 	require("./controllers/remove");
+	require("./routes")(app);
 };
