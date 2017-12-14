@@ -1,14 +1,14 @@
 "use strict";
 
 angular
-	.module("arcgis-am_1.1.1")
+	.module("arcgis-am_1.1.7")
 	.provider("arcgisAMConfig", [
 		"MODULE_ENV_CONFIG",
 
 		function membersConfig(MODULE_ENV_CONFIG) {
 			this.API = {
 				name: MODULE_ENV_CONFIG.angularModule,
-				version: "1.1.1",
+				version: "1.1.7",
 				feDirPath: MODULE_ENV_CONFIG.feDirPath,
 				assetsDirPath: MODULE_ENV_CONFIG.assetsDirPath,
 				cssDirPath: MODULE_ENV_CONFIG.cssDirPath,
