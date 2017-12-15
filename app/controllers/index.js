@@ -1,11 +1,13 @@
-var helpers = require("./helpers");
 var create = require("./create");
-var update = require("./update");
+var helpers = require("./helpers");
 var remove = require("./remove");
+var reindex = require("./reindex");
+var update = require("./update");
 
 module.exports = {
-    helpers: helpers,
     create: create,
-    update: update,
-    remove: remove
+    helpers: helpers,
+    reindex: reindex,
+    remove: remove,
+    update: update
 };
