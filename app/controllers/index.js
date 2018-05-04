@@ -5,9 +5,9 @@ var reindex = require("./reindex");
 var update = require("./update");
 
 module.exports = {
-    create: create,
-    helpers: helpers,
-    reindex: reindex,
-    remove: remove,
-    update: update
+	create,
+	helpers,
+	reindex,
+	remove,
+	update,
 };

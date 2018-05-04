@@ -1,64 +1,63 @@
 {
-    "name": "wcm-arcgis-module-am",
-    "version": "0.0.7",
-    "description": "ArcGIS module",
-    "main": "app/routes/index.js",
+    "name": "@wcm/arcgis-module-am",
+    "version": "1.1.10",
+    "description": "ArcGIS module for AM",
+    "main": "app",
     "scripts": {
         "test": "NODE_ENV=test ./node_modules/.bin/istanbul cover --dir ./coverage ./node_modules/.bin/_mocha -- -R spec -t 15000 --recursive --slow 2"
     },
     "keywords": [
-        "arcgis"
+        "arcgis",
+        "Pelorus",
+        "WCM"
     ],
+    "publishConfig": {
+        "@wcm:registry": "https://nexusrepo.antwerpen.be/repository/npm-private"
+    },
     "wcmModule": {
-        "frontend": {
-            "dirPath": "public/app/",
-            "moduleConfig": {
-                "translationKey": "Arcgis",
-                "operationType": "arcgis-am",
-                "icon": "map",
-                "type": "system",
-                "navigationItem": true,
-                "authentication": {
-                    "requiresLogin": true
-                }
+        "angularDirPath": "public/app/",
+        "moduleConfig": {
+            "angularModule": "arcgis-am",
+            "translationKey": "Arcgis",
+            "operationType": "arcgis-am",
+            "icon": "map",
+            "type": "system",
+            "navigationItem": true,
+            "authentication": {
+                "requiresLogin": true
             }
         },
-        "backend": {
-            "dirPath": "app/",
-            "variables": [
-                {
-                    "group": "Features",
-                    "key": "features",
-                    "enabled": true,
-                    "accordion": true,
-                    "variables": [
-                        {
-                            "label": "Polygon url",
-                            "description": "Polygon feature layer url.",
-                            "key": "polygonUrl",
-                            "value": "",
-                            "type": "text",
-                            "required": true
-                        },
-                        {
-                            "label": "Point url",
-                            "description": "Point feature layer url.",
-                            "key": "pointUrl",
-                            "value": "",
-                            "type": "text",
-                            "required": true
-                        }
-                    ]
-                }
-            ],
-            "routeDirPaths": [
-                "app/routes/"
-            ]
-        }
+        "variables": [
+            {
+                "group": "Features",
+                "key": "features",
+                "enabled": true,
+                "accordion": true,
+                "variables": [
+                    {
+                        "label": "Polygon url",
+                        "description": "Polygon feature layer url.",
+                        "key": "polygonUrl",
+                        "value": "",
+                        "type": "text",
+                        "required": true
+                    },
+                    {
+                        "label": "Point url",
+                        "description": "Point feature layer url.",
+                        "key": "pointUrl",
+                        "value": "",
+                        "type": "text",
+                        "required": true
+                    }
+                ]
+            }
+        ]
     },
     "author": "Thomas Bormans",
-    "license": "MIT",
+    "license": "ISC",
     "dependencies": {
+        "@wcm/module-helper": "1.0.0",
         "lodash": "~4.17.4",
         "node-uuid": "~1.4.7",
         "q": "~1.4.1",

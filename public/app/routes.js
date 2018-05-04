@@ -1,30 +1,30 @@
 "use strict";
 
 angular
-    .module("wcm-arcgis-module-am_0.0.7")
-    .config([
-        "$stateProvider",
-        "arcgisAMConfigProvider",
+	.module("arcgis-am_1.1.10")
+	.config([
+		"$stateProvider",
+		"arcgisAMConfigProvider",
 
-        function(
-            $stateProvider,
-            acpaassearchConfigProvider
-        ) {
+		function(
+			$stateProvider,
+			acpaassearchConfigProvider
+		) {
 
-            var moduleFolder = acpaassearchConfigProvider.API.modulePath;
+			var moduleFolder = acpaassearchConfigProvider.API.modulePath;
 
-            $stateProvider
-                .state("pelorus.wcm-arcgis-module-am.index", {
-                    url: "",
-                    access: {
-                        requiresLogin: true
-                    },
-                    ncyBreadcrumb: {
-                        label: "{{breadcrumb}}"
-                    },
-                    templateUrl: moduleFolder + "views/overview.html",
-                    controller: "arcgisAMOverviewController"
-                });
-        }
-    ]
-    );
+			$stateProvider
+			.state("pelorus.arcgis-am.index", {
+				url: "",
+				access: {
+					requiresLogin: true,
+				},
+				ncyBreadcrumb: {
+					label: "{{breadcrumb}}",
+				},
+				templateUrl: moduleFolder + "views/overview.html",
+				controller: "arcgisAMOverviewController",
+			});
+		},
+	]
+);

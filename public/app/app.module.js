@@ -1,19 +1,19 @@
 "use strict";
 
-angular.module("wcm-arcgis-module-am_0.0.7.directives", []);
-angular.module("wcm-arcgis-module-am_0.0.7.factories", []);
-angular.module("wcm-arcgis-module-am_0.0.7.services", ["wcm-arcgis-module-am_0.0.7.factories"]);
-angular.module("wcm-arcgis-module-am_0.0.7.controllers", ["wcm-arcgis-module-am_0.0.7.services"]);
+angular.module("arcgis-am_1.1.10.directives", []);
+angular.module("arcgis-am_1.1.10.factories", []);
+angular.module("arcgis-am_1.1.10.services", ["arcgis-am_1.1.10.factories"]);
+angular.module("arcgis-am_1.1.10.controllers", ["arcgis-am_1.1.10.services"]);
 
 angular
-	.module("wcm-arcgis-module-am_0.0.7", [
-    "pelorus.services",
+	.module("arcgis-am_1.1.10", [
+		"pelorus.services",
 
-    "wcm-arcgis-module-am_0.0.7.directives",
-    "wcm-arcgis-module-am_0.0.7.factories",
-    "wcm-arcgis-module-am_0.0.7.services",
-    "wcm-arcgis-module-am_0.0.7.controllers"
-])
+		"arcgis-am_1.1.10.directives",
+		"arcgis-am_1.1.10.factories",
+		"arcgis-am_1.1.10.services",
+		"arcgis-am_1.1.10.controllers",
+	])
 	.run([function() {
-    console.log("Arcgis AM module is available!"); // eslint-disable-line no-console
-}]);
+		console.log("Arcgis AM module is available!"); // eslint-disable-line no-console
+	}]);

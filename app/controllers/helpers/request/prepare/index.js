@@ -4,8 +4,8 @@ var removeAll = require("./removeAll");
 var upsert = require("./upsert");
 
 module.exports = {
-    getAllIds: getAllIds,
-    remove: remove,
-    removeAll: removeAll,
-    upsert: upsert
+	getAllIds,
+	remove,
+	removeAll,
+	upsert,
 };
