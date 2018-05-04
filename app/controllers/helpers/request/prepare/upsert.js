@@ -1,16 +1,22 @@
-module.exports = function(data) {
-    data.shapes.forEach(function(item) {
-        // Set create/update request
-        item.options = {
-            json: true,
-            method: "POST",
-            url: data.variables[item.ref.type + "Url"] + "/" + item.method,
-            qs: {
-                f: "json",
-                features: JSON.stringify(item.geometry)
-            }
-        };
-    });
+var R = require("ramda");
 
-    return data;
+module.exports = function(data) {
+	data.shapes = R.reduce(function(arr, item) {
+		if (!data.variables[item.ref.type + "Url"]) {
+			return arr;
+		}
+
+		// Set create/update request
+		return arr.concat(R.set(R.lensProp("options"), {
+			json: true,
+			method: "POST",
+			url: data.variables[item.ref.type + "Url"] + "/" + item.method,
+			formData: {
+				features: JSON.stringify(item.geometry),
+				f: "json",
+			},
+		}, item));
+	}, [], data.shapes);
+
+	return data;
 };
