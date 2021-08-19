@@ -4,8 +4,8 @@ var request = require("./request");
 var validate = require("./validate");
 
 module.exports = {
-    db: db,
-    map: map,
-    request: request,
-    validate: validate
+	db: db,
+	map: map,
+	request: request,
+	validate: validate,
 };

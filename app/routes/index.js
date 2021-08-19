@@ -1,6 +1,5 @@
-module.exports = function() {
-    // Require controllers to start listeners
-    require("../controllers/create");
-    require("../controllers/update");
-    require("../controllers/remove");
+var reindex = require("./reindex");
+
+module.exports = function(app) {
+	reindex(app);
 };
