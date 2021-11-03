@@ -51,9 +51,9 @@
                         "required": true
                     },
                     {
-                        "label": "Line url",
-                        "description": "Line feature layer url.",
-                        "key": "lineUrl",
+                        "label": "Polyline url",
+                        "description": "Polyline feature layer url.",
+                        "key": "polylineUrl",
                         "value": "",
                         "type": "text",
                         "required": true
