@@ -22,6 +22,11 @@ module.exports = function(data) {
 				item.geometry[0].geometry.y = item.shape.geometry.coordinates[1];
 				break;
 
+			// Set polyLine geometry
+			case "LineString":
+				item.geometry[0].geometry.rings = item.shape.geometry.coordinates;
+				break;
+
 			default:
 				console.log("%s not supported at the moment.", item.geometry.type); // eslint-disable-line no-console
 		}

@@ -21,10 +21,11 @@ var checkVariables = function(response) {
 	if (_.get(response, "features.variables")) {
 		response = response.features.variables;
 		// Check if both url's are proved
-		if (response.hasOwnProperty("polygonUrl") && response.polygonUrl !== "" && response.hasOwnProperty("pointUrl") && response.pointUrl !== "") {
+		if (response.hasOwnProperty("polygonUrl") && response.polygonUrl !== "" && response.hasOwnProperty("pointUrl") && response.pointUrl !== "" && response.hasOwnProperty("polylineUrl") && response.polylineUrl !== "") {
 			// Validate url
 			response.polygonUrl = checkUrl(response.polygonUrl);
 			response.pointUrl = checkUrl(response.pointUrl);
+			response.polylineUrl = checkUrl(response.polylineUrl);
 			prom.resolve(response);
 		} else {
 			prom.reject("Url's not set");
