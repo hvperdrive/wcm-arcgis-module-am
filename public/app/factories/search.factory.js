@@ -1,7 +1,7 @@
 "use strict";
 
 angular
-	.module("arcgis-am_1.1.12.factories")
+	.module("arcgis-am_1.1.13.factories")
 	.factory("arcgisAMFactory", [
 		"$http",
 		"configuration",
