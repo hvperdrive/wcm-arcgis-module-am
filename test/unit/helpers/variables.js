@@ -26,6 +26,7 @@ describe("Variables helper", function() {
 							variables: {
 								polygonUrl: "http://www.url-with-trailing-slash.com/",
 								pointUrl: "http://www.url-without-trailing-slash.com",
+								polylineUrl: "http://www.url-with-trailing-slash.com/",
 							},
 						},
 					});
@@ -43,6 +44,8 @@ describe("Variables helper", function() {
 				expect(response.polygonUrl).to.be.equal("http://www.url-with-trailing-slash.com");
 				expect(response).to.have.property("pointUrl");
 				expect(response.pointUrl).to.be.equal("http://www.url-without-trailing-slash.com");
+				expect(response).to.have.property("polylineUrl");
+				expect(response.polylineUrl).to.be.equal("http://www.url-with-trailing-slash.com");
 				done();
 			}, function onError(responseError) {
 				expect(responseError).to.be.undefined;
@@ -127,6 +130,7 @@ describe("Variables helper", function() {
 							variables: {
 								polygonUrl: "http://www.url-with-trailing-slash.com/",
 								pointUrl: "http://www.url-without-trailing-slash.com",
+								polylineUrl: "http://www.url-with-trailing-slash.com/",
 							},
 						},
 					});
@@ -140,6 +144,7 @@ describe("Variables helper", function() {
 				variables: {
 					polygonUrl: "http://www.url-with-trailing-slash.com/",
 					pointUrl: "http://www.url-without-trailing-slash.com",
+					polylineUrl: "http://www.url-with-trailing-slash.com/",
 				},
 			},
 		};
@@ -153,6 +158,8 @@ describe("Variables helper", function() {
 				expect(response.polygonUrl).to.be.equal("http://www.url-with-trailing-slash.com");
 				expect(response).to.have.property("pointUrl");
 				expect(response.pointUrl).to.be.equal("http://www.url-without-trailing-slash.com");
+				expect(response).to.have.property("polylineUrl");
+				expect(response.polylineUrl).to.be.equal("http://www.url-with-trailing-slash.com");
 				done();
 			}, function onError(responseError) {
 				expect(responseError).to.be.undefined;
@@ -197,6 +204,7 @@ describe("Variables helper", function() {
 							variables: {
 								polygonUrl: "",
 								pointUrl: "",
+								polylineUrl: "",
 							},
 						},
 					});
@@ -210,6 +218,7 @@ describe("Variables helper", function() {
 				variables: {
 					polygonUrl: "",
 					pointUrl: "",
+					polylineUrl: "",
 				},
 			},
 		};
