@@ -5,7 +5,7 @@ var Q = require("q");
 var handleUpsertResponse = function handleUpsertResponse(body) {
 	var keys = Object.keys(body);
 
-	if (keys.length === 1 && (keys[0] === "addResults" || keys[0] === "updateResults")) {
+	if (keys.length === 1 && (keys[0] === "addResults" || keys[0] === "updateResults" || keys[0] === "deleteResults")) {
 		body = body[keys[0]];
 
 		if (_.get(body, "[0].objectId", false) && _.get(body, "[0].success", false) && body[0].success) {
@@ -14,6 +14,7 @@ var handleUpsertResponse = function handleUpsertResponse(body) {
 				objectId: body[0].objectId,
 			});
 		}
+
 		return Q.reject("ObjectId not received from ArcGIS");
 	} else if (_.get(body, "success", false)) {
 		return Q.when();

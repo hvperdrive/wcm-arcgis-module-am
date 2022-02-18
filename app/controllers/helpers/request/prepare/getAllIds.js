@@ -2,6 +2,7 @@ var R = require("ramda");
 
 var POLYGON_TYPE = "polygon";
 var POINT_TYPE = "point";
+var POLYLINE_TYPE = "polyline";
 
 var getAllIdsOptionsOfType = R.curry(function getAllIdsOptionsOfType(type, variables) {
 	return {
@@ -19,4 +20,5 @@ var getAllIdsOptionsOfType = R.curry(function getAllIdsOptionsOfType(type, varia
 module.exports = R.juxt([
 	getAllIdsOptionsOfType(POLYGON_TYPE),
 	getAllIdsOptionsOfType(POINT_TYPE),
+	getAllIdsOptionsOfType(POLYLINE_TYPE),
 ]);

@@ -1,6 +1,6 @@
 {
     "name": "@wcm/arcgis-module-am",
-    "version": "1.1.10",
+    "version": "1.1.18",
     "description": "ArcGIS module for AM",
     "main": "app",
     "scripts": {
@@ -46,6 +46,22 @@
                         "label": "Point url",
                         "description": "Point feature layer url.",
                         "key": "pointUrl",
+                        "value": "",
+                        "type": "text",
+                        "required": true
+                    },
+                    {
+                        "label": "Polyline url",
+                        "description": "Polyline feature layer url.",
+                        "key": "polylineUrl",
+                        "value": "",
+                        "type": "text",
+                        "required": true
+                    },
+                    {
+                        "label": "Project ContentType ID",
+                        "description": "The internal project content type ID.",
+                        "key": "projectContentTypeId",
                         "value": "",
                         "type": "text",
                         "required": true
